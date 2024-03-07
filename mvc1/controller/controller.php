@@ -12,22 +12,6 @@ if (function_exists($funcao) && is_callable($funcao)) {
     echo "Ação inválida";
 }
 
-
-
-function minhafuncao(){
-	$msg = '';
-	if(isset($_GET['msg']))
-		$msg = $_GET['msg'];
-	include '../view/minhafuncao_view.php';
-}
-
-function outrafuncao(){
-	$msg = '';
-	if(isset($_GET['msg']))
-		$msg = $_GET['msg'];
-	include '../view/outrafuncao_view.php';
-}
-
 function formulario(){
 	$n1 = '';
 	if(isset($_GET['n1']))
@@ -94,6 +78,35 @@ function salvar(){
 	$nome= $_GET['nome'];
 	$datanasc= $_GET['datanasc'];
 	include '../view/resultadoCliente.php';
+}
+
+function formulario_r2g(){
+	include '../view/formulario_r2g.php';
+}
+
+function raizquadrada(){
+	$tipo = 'RAIZ QUADRADA';
+	$n1 = '';
+	if(isset($_GET['n1']))
+		$n1 = $_GET['n1'];
+	$resultado = Calculadora::raizquadrada($n1);
+	include '../view/resultado.php';
+}
+
+function raizes2grau(){
+	$tipo = 'DIVISÃO';
+	$n1 = '';
+	if(isset($_GET['n1']))
+		$n1 = $_GET['n1'];
+	$n2 = '';
+	if(isset($_GET['n2']))
+		$n2 = $_GET['n2'];	
+	$n3 = '';
+	if(isset($_GET['n3']))
+		$n3 = $_GET['n3'];		
+	
+	$resultado = Calculadora::raizes2grau($n1,$n2,$n3);
+	include '../view/resultado.php';
 }
 
 ?>

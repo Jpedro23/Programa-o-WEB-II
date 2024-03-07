@@ -11,29 +11,20 @@
    <h1>Formulário</h1>
 
    <form  method="get" action="../controller/controller.php">
+   
+    <input type="hidden" name="funcao" value="raizes2grau">
 
-	Operação<br>
-    <select name="funcao">
-      <option value="soma">Soma</option>
-      <option value="subtrair">Subtrair</option>
-      <option value="multiplicar">Multiplicar</option> 
-	  <option value="dividir">Dividir</option>
-      <option value="raizes2grau">Equação do 2º Grau</option> 
-	   <option value="raizquadrada">Raiz Quadrada</option> 
-	   <option value="raizquadrada">X²</option> 
-    </select>
 
 <br>
-    N1<br>
+    Primeiro valor: <br>
     <input type="input" name="n1" value="">
-    <br><br>
-        N2<br>
+        <br><br>
+    Segundo valor: <br>
     <input type="input" name="n2" value="">
-
-    <br><br>
-        N3<br>
+        <br><br>
+    Terceiro valor: <br>
     <input type="input" name="n3" value="">
-<br><br>
+        <br><br>
     <input type="submit" value="Calcular" > 
      
    </form>
